@@ -13,7 +13,7 @@ const Appointments = ({ date }) => {
     const [appointments, setAppointments] = useState([]);
 
     useEffect(() => {
-        const uri = `https://gentle-plateau-71458.herokuapp.com/appointments?email=${user.email}&date=${date}`;
+        const uri = `https://gentle-plateau-71458.herokuapp.com/appointments?email=${user.email}&date=${date.toLocaleDateString()}`;
         fetch(uri, {
             headers: {
                 'authorization': `Bearer ${token}`
